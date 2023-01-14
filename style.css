@@ -38,7 +38,11 @@ main{
 header{
     display: flex;
     justify-content: space-between;
-       
+    /* width: 100%;        */
+}
+
+nav{
+    /* width: 100%;        */
 }
 
 .marca-container{
@@ -59,11 +63,12 @@ header{
 nav, nav ul{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     }
 
 li{
     list-style: none;
-    margin-right: 10px;
+    margin-right: 5px;
     padding: 5px 15px;
 }
 
@@ -96,6 +101,8 @@ ul li a{
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+
 
 .name-container P{
     font-size: 1.8rem;
@@ -138,6 +145,10 @@ section.container article{
     width: 50%;
 }
 
+section.container article p{
+    margin: 5px;   
+}
+
 section.container img{
     border-radius: 5px;
     padding: 5px;
@@ -171,4 +182,50 @@ footer{
     background-color:  rgb(1, 23, 48);
     color: whitesmoke;
     
+}
+
+/* media querys */
+
+@media screen and (max-width: 936px ) {
+    body{
+        font-size: .9rem;
+    }
+
+    header{
+        flex-direction: column;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .name-container p{
+        text-align: center;
+    }
+
+    .name-container P:first-child{
+        font-size: 1.8rem;
+        background-color: rgba(7, 7, 7, 0.3);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .name-container p + p{
+        color: gold;
+    }
+
+    section.container{
+        flex-direction: column;
+        width: auto;
+    }
+
+    section.container article, section.container img{
+        width: auto;
+        padding: 10px;
+    }
+    
+    
+
+    footer{
+        text-align: center;
+    }
+
 }
